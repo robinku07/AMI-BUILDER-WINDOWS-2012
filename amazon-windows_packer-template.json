@@ -11,6 +11,7 @@
         "type": "amazon-ebs",
         "region": "{{user `aws_region`}}",
         "instance_type": "m5.large",
+	"communicator": "winrm",
         "winrm_username": "Administrator",
         "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Customized Windows Image",
