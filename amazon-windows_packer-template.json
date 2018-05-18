@@ -15,6 +15,7 @@
         "winrm_username": "Administrator",
 	"winrm_use_ssl" : true,
 	"winrm_insecure" : true,
+	"winrm_timeout" : "10m",
         "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Customized Windows Image",
 	"vpc_id":"{{user `vpcid`}}",
