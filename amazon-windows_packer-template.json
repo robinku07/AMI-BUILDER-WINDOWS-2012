@@ -31,21 +31,11 @@
 
     "provisioners": [
         {
-            "type": "shell",
+            "type": "powershell",
             "inline": [
-                "sudo yum update -y",
-		"sudo /usr/sbin/update-motd --disable",
-                "echo 'No unauthorized access permitted' | sudo tee /etc/motd",
-                "sudo rm /etc/issue",
-                "sudo ln -s /etc/motd /etc/issue",
-                "sudo yum install -y elinks screen",
-		"echo Downloading and Installing Hubble.......",
-		"sudo wget https://s3-us-west-2.amazonaws.com/hubblestack-releases/hubblestack-2.2.9-1.default.al1609.x86_64.rpm -O /tmp/hubblestack-2.2.9-1.default.al1609.x86_64.rpm",
-		"sudo yum localinstall /tmp/hubblestack-2.2.9-1.default.al1609.x86_64.rpm -y",
-		"echo Downloading the Hardening Scripts from GIT........",
-		"sudo wget https://raw.githubusercontent.com/robinku07/Remediation-kits/master/Amazon-CIS-Remediation.sh -O /tmp/Hardening.sh",
-		"sudo sh -x /tmp/Hardening.sh",
-		"sudo hubble hubble.audit",
+                "wget -OutFile Notepad-plus.exe https://notepad-plus-plus.org/repository/7.x/7.5.6/npp.7.5.6.Installer.x64.exe",
+		"wget -OutFile https://www.7-zip.org/a/7z1805-x64.msi",
+                "wget -OutFile https://download.sysinternals.com/files/SysinternalsSuite.zip",
 		"echo Build Complete."
 		
             ]
