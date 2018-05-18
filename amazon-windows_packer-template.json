@@ -8,25 +8,25 @@
     },
 
     "builders": [{
-        "type": "amazon-ebs",
-        "region": "{{user `aws_region`}}",
-        "instance_type": "m5.large",
-	"communicator": "winrm",
-        "winrm_username": "Administrator",
+        "type" : "amazon-ebs",
+        "region" : "{{user `aws_region`}}",
+        "instance_type" : "m5.large",
+	"communicator" : "winrm",
+        "winrm_username" : "Administrator",
 	"winrm_use_ssl" : true,
 	"winrm_insecure" : true,
 	"winrm_timeout" : "10m",
-	"user_data_file":"./init.ps1",
-        "ami_name": "{{user `aws_ami_name`}}",
-        "ami_description": "Customized Windows Image",
-	"vpc_id":"{{user `vpcid`}}",
-	"subnet_id":"{{user `subnetid`}}",
-	"security_group_id":"{{user `securitygroupid`}}",
-        "source_ami_filter": {
+	"user_data_file" : "init.ps1",
+        "ami_name" : "{{user `aws_ami_name`}}",
+        "ami_description" : "Customized Windows Image",
+	"vpc_id" : "{{user `vpcid`}}",
+	"subnet_id" : "{{user `subnetid`}}",
+	"security_group_id" : "{{user `securitygroupid`}}",
+        "source_ami_filter" : {
             "filters": {
-                "virtualization-type": "hvm",
-                "name": "Windows_Server-2016-English-Full-Base*",
-                "root-device-type": "ebs"
+                "virtualization-type" : "hvm",
+                "name" : "Windows_Server-2016-English-Full-Base*",
+                "root-device-type" : "ebs"
             },
             "owners": ["137112412989", "591542846629", "801119661308", "102837901569", "013907871322", "206029621532", "286198878708", "443319210888"],
             "most_recent": true
