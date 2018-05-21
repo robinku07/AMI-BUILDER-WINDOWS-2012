@@ -45,9 +45,7 @@
         },
 	{
 	    "type": "powershell",    
-	    "inline": [
-		"script": "aws-windows-2012-configure-ec2service.ps1"
-	    ]
+	    "script": "aws-windows-2012-configure-ec2service.ps1
 	}
 	    
     ]
