@@ -1,7 +1,7 @@
 {
     "variables": {
         "aws_region": "{{env `AWS_REGION`}}",
-        "aws_ami_name": "amazon-windows-2012_{{timestamp}}",
+        "aws_ami_name": "CloudOps-windows-2012_{{timestamp}}",
 	"vpcid":"{{env `VPC_ID`}}",
 	"subnetid":"{{env `SUBNET_ID`}}",
 	"securitygroupid":"{{env `SECURITY_GID`}}"
