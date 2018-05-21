@@ -41,10 +41,14 @@
 		"wget -OutFile 7z1805-x64.msi https://www.7-zip.org/a/7z1805-x64.msi",
                 "wget -OutFile SysinternalsSuite.zip https://download.sysinternals.com/files/SysinternalsSuite.zip",
 		"echo Build Complete."
-            ],
+            ]
+        },
+	{
+	    "type": "powershell",    
 	    "inline": [
-		    "script": "aws-windows-2012-configure-ec2service.ps1"
+		"script": "aws-windows-2012-configure-ec2service.ps1"
 	    ]
-        }
+	}
+	    
     ]
 }
