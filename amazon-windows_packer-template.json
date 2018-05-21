@@ -1,7 +1,7 @@
 {
     "variables": {
         "aws_region": "{{env `AWS_REGION`}}",
-        "aws_ami_name": "CloudOps-windows-2012_{{timestamp}}",
+        "aws_ami_name": "DevSecOpsWorld-windows-2012_{{timestamp}}",
 	"vpcid":"{{env `VPC_ID`}}",
 	"subnetid":"{{env `SUBNET_ID`}}",
 	"securitygroupid":"{{env `SECURITY_GID`}}"
@@ -18,7 +18,7 @@
 	"winrm_timeout" : "10m",
 	"user_data_file" : "init.ps1",
         "ami_name" : "{{user `aws_ami_name`}}",
-        "ami_description" : "Image Factory Windows 2012 Image",
+        "ami_description" : "DevSecOpsWorld Image Factory Windows 2012 Image",
 	"vpc_id" : "{{user `vpcid`}}",
 	"subnet_id" : "{{user `subnetid`}}",
 	"security_group_id" : "{{user `securitygroupid`}}",
