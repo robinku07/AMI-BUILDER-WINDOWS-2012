@@ -24,6 +24,10 @@ foreach ($element in $xmlElementToModify.Plugin)
     {
         $element.State="Enabled"
     }
+    elseif ($element.name -eq "Ec2DynamicBootVolumeSize")
+    {
+        $element.State="Enabled"
+    }
 }
 $xml.Save($ConfigFile)
 
