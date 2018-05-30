@@ -40,7 +40,7 @@
                 "wget -OutFile Notepad-plus.exe https://notepad-plus-plus.org/repository/7.x/7.5.6/npp.7.5.6.Installer.x64.exe",
 		"wget -OutFile 7z1805-x64.msi https://www.7-zip.org/a/7z1805-x64.msi",
                 "wget -OutFile SysinternalsSuite.zip https://download.sysinternals.com/files/SysinternalsSuite.zip",
-		"echo Build Complete."
+		"echo Build Complete with Tools."
             ]
         },
 	{
