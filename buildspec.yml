@@ -25,4 +25,4 @@ phases:
       - ./packer build amazon-windows_packer-template.json
   post_build:
     commands:
-      - echo "Image Factory Packer build completed on `date`"
+      - echo "Image Factory Packer build completed on `date` with all Required Tools."
